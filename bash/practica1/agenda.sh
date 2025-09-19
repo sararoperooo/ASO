@@ -14,4 +14,23 @@ case $opcion in
     if [[ ! -f "$archivo" ]]; then
       echo "No existe el archivo"
     else
-      read -p 
+      read -p "Introduce texto a buscar: " busqueda
+      grep -i "$patron" "$archivo" || echo "No hay coincidencias"
+    fi
+    ;;
+  lista) 
+    if [[ ! -f "$archivo" ]]; then
+      echo "no existe el archivo aun"
+    else
+      cat "$archivo"
+    fi
+    ;;
+  ordenar)
+    if [[ ! -f "$archivo" ]]; then
+      echo "no existe el archivo aun"
+    else
+      sort "$archivo" -o "$archivo"
+    fi
+    ;;
+  borrar)
+
