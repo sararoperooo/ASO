@@ -18,7 +18,7 @@ case $opcion in
       grep -i "$patron" "$archivo" || echo "No hay coincidencias"
     fi
     ;;
-  lista) 
+  listar) 
     if [[ ! -f "$archivo" ]]; then
       echo "no existe el archivo aun"
     else
@@ -33,4 +33,9 @@ case $opcion in
     fi
     ;;
   borrar)
-
+    rm -f $archivo
+    ;;
+  *)
+    echo "error, introduce una opción válida"
+    ;;
+esac
