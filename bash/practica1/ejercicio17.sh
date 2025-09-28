@@ -2,7 +2,8 @@
 read -p "Introduce un número: " numero
 
 while [[ numero -ne 0 ]]; do
-    resultado=$((numero++))
-    echo "$resultado"
+    suma=$((numero+suma))
+    echo "$suma"
     read -p "Introduce un otro: " numero
 
+done
